@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style1.css">
+    <script src="https://kit.fontawesome.com/a34038e15b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="top-container">
+        <i class="fa-solid fa-bars threeBars-icon"></i>
+    </div>
+    <div class="middle-container">
+        <div class="all-list-container-outer">
+            <div class="all-list-container">
+                <div class="list-title">
+                    All lists
+                </div>
+                <div class="Bar-container-1">
+                    <div class="Bar-container-2">
+                        <input type="text" class="SearchBar" placeholder="Search or add items" id="AllList-searchBar">
+                        <i class="fa-solid fa-plus add-icon " id="AllList_addIcon"></i>
+                    </div>
+                </div>
+                <ul id="AllList-ul">
+                </ul>
+            </div>
+        </div>
+        <div class="list-container-outer">
+            <div class="list-container">
+                <div class="wrapper">
+                    <div class="list-title" id="todo-list-Title">
+
+                    </div>
+                    <div class="Bar-container-1">
+                        <div class="Bar-container-2">
+                            <input type="text" class="SearchBar" placeholder="Search or add items" id="list-searchBar">
+                            <i class="fa-solid fa-plus add-icon" id="add-icon"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <ul id="toDo-list">
+                </ul>
+            </div>
+
+            <div class="status-container-outer">
+                <div class="status-container">
+                    <div class="delete-div">
+                        <i class="fa-solid fa-trash-can delete-icon"></i>
+                    </div>
+                    <div class="pending-div">
+                        <div class="half1">
+                            <i class="fa-solid fa-bars-progress"></i>
+                        </div>
+                        <div class="half2 pending-task">
+
+                        </div>
+                    </div>
+                    <div class="delete-checked-div">
+                        <span class="delete-icon-container">
+                            <i class="fa-solid fa-trash-can"></i>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </span>
+                    </div>
+                    <div class="completed-div">
+                        <div class="half1">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <div class="half2 Checked-task">
+
+                        </div>
+                        <!-- <div class="onHoverText">Completed Task</div> -->
+                    </div>
+                    <div class="total-task-div">
+                        <div class="half1">
+                            <i class="fa-solid fa-clipboard-list"></i>
+                        </div>
+                        <div class="half2 total-task">
+
+                        </div>
+                        <!-- <div class="onHoverText">Total Task</div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- javascript source here  -->
+    <script src="Javascript/main.js"></script>
+</body>
+
+</html>

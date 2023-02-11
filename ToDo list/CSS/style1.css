@@ -1,0 +1,379 @@
+/* google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;600&family=Kanit:ital,wght@0,200;0,300;0,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500;700;900&display=swap');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Catamaran', sans-serif;
+    padding-bottom: 2rem;
+}
+
+.top-container {
+    width: 100vw;
+    min-height: 12vh;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: rgb(71, 236, 71)
+}
+
+.threeBars-icon {
+    width: 4%;
+    height: 50%;
+    margin-top: 1%;
+    margin-left: 2%;
+    color: black;
+    border-radius: 5px;
+    background-color: #0000003d;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 2rem;
+}
+
+
+
+/* middle container  */
+.middle-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+
+/*  all features of list like delete or pending task */
+
+.status-container-outer {
+    height: 10%;
+    width: 55%;
+    margin: auto;
+    position: sticky;
+    bottom: 3.8%;
+    left: 30.8%;
+}
+
+.status-container {
+    background-color: rgb(9, 197, 8);
+    height: 100%;
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    text-align: center;
+    line-height: 2.5;
+}
+
+i {
+    opacity: .8;
+}
+
+.status-container>div {
+    width: 20%;
+    border-left: solid 1px;
+    position: relative;
+    font-size: 1.5rem;
+    transition: all .8s ease;
+}
+
+.status-container>div:hover {
+    color: white;
+}
+
+
+.onHoverText {
+    opacity: 0;
+    width: 100%;
+    font-size: .8rem;
+    color: black;
+    font-weight: bold;
+    transition: all 1s ease;
+    position: absolute;
+    bottom: -8px;
+}
+
+.status-container>div:hover .onHoverText {
+    opacity: 1;
+}
+
+
+.delete-div:first-child {
+    border-left: none;
+}
+
+.total-task-div,
+.completed-div,
+.pending-div {
+    display: flex;
+}
+
+.half1,
+.half2 {
+    width: 50%;
+}
+
+.all-list-container-outer, .list-container{
+    background-color: #10190424;
+}
+/* css of container of all list and everything inside it  */
+
+#AllList-ul li {
+    cursor: pointer;
+}
+
+.all-list-container-outer {
+    width: 30%;
+    height: 88vh;
+    position: fixed;
+    top: 12%;
+    left: 0px;
+    animation: comeIn 1s ease 0s 1;
+}
+
+@keyframes comeIn {
+    from {
+        left: -30%;
+    }
+
+    to {
+        left: 0%;
+    }
+}
+
+@keyframes goOut {
+    from {
+        left: 0%;
+    }
+
+    to {
+        left: -30%;
+    }
+}
+
+.all-list-container {
+    width: 85%;
+    min-height: 70%;
+    border-radius: 10px 10px 0px 0px;
+    margin: auto;
+    margin-top: 12%;
+    padding-bottom: 8%;
+    background-color: white;
+}
+
+.list-container-outer {
+    width: 70%;
+    height: 88vh;
+
+}
+
+/* to do list css  */
+
+.wrapper {
+    position: sticky; /* contains list title and search bar of to do list */
+    top: 12%;
+    z-index: 1;  /* so that the list should not show over it */
+}
+
+.list-container {
+    width: 55%;
+    min-height: 75%;
+    margin: auto;
+    margin-top: 5%;
+    padding-bottom: 5%;
+}
+
+.list-container,
+.list-title {
+    border-radius: 10px 10px 0px 0px;
+}
+
+.list-title {
+    text-align: center;
+    font-weight: 700;
+    height: 3.5rem;
+    line-height: 2;
+    font-size: 1.8rem;
+    background-color: rgb(9, 197, 9);
+}
+
+/* serach button in to do list  */
+.Bar-container-1 {
+    width: 100%;
+    background-color: lightgreen;
+}
+
+.Bar-container-2 {
+    margin: auto;
+    width: 75%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.SearchBar {
+    border-radius: 10px 0px 0px 10px;
+    border: none;
+    width: 80%;
+    height: 55%;
+}
+
+
+.add-icon {
+    background-color: rgba(0, 0, 0, 0.678);
+    color: white;
+    height: 55%;
+    width: 12%;
+    text-align: center;
+    border-radius: 0px 10px 10px 0px;
+}
+
+#AllList_addIcon,
+#add-icon {
+    line-height: 1.7;
+}
+
+
+input[type="text"] {
+    text-align: center;
+}
+
+
+/*  actual to do list styling  */
+ul {
+    list-style: none;
+    text-align: center;
+}
+
+li {
+    border-bottom: 1px solid #0000004a;
+    margin: auto;
+    padding: 6px;
+    width: 70%;
+    position: relative;
+    font-size: .9rem;
+}
+
+
+input[type='checkbox'] {
+    position: absolute;
+    left: 0px;
+    top: 30%;
+    width: 30px;
+    height: 15px;
+    /* z-index: 1; to keep the box above the list */
+}
+
+/*  strike thru animation code */
+
+.checked::before,
+.Unchecked::before {
+    content: ' ';
+    position: absolute;
+    background-color: black;
+    height: 1px;
+    width: 100%;
+    top: 50%;
+    animation: checkAnimation .6s ease 0s 1;
+}
+
+.Unchecked::before {
+    animation: unCheckAnimation .6s ease 0s 1 forwards;
+}
+
+
+@keyframes unCheckAnimation {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0%;
+        content: ' ';
+    }
+}
+
+
+@keyframes checkAnimation {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.Unchecked,
+.checked {
+    position: relative;
+}
+
+span {
+    margin-left: 8%;
+}
+
+/*  making responsive website for mobile */
+
+@media screen and (max-width: 740px) {
+    .top-container {
+        min-height: 8vh;
+    }
+
+    .all-list-container-outer {
+        width: 80%;
+        z-index: 1;
+        top: 8.5%;
+        background-color: rgba(0, 0, 0, 0.767);
+    }
+
+    .list-container-outer {
+        width: 100vw;
+        margin-top: 5%;
+        z-index: 0;
+    }
+
+    .list-container{
+        margin-top: 10%;
+    }
+
+    .list-container, .status-container-outer{
+        min-width: 80%;
+    }
+
+    .status-container-outer {
+        height: 10%;
+        margin: auto;
+        bottom: 5.8%;
+        left: 10%;
+    }
+
+    i{
+        font-size: 1.2rem;
+    }
+
+    .threeBars-icon{
+        min-width: 10%;
+    }
+
+    @keyframes comeIn {
+        from {
+            left: -80%;
+        }
+    
+        to {
+            left: 0%;
+        }
+    }
+    
+    @keyframes goOut {
+        from {
+            left: 0%;
+        }
+    
+        to {
+            left: -80%;
+        }
+    }
+}
